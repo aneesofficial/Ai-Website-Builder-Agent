@@ -4,15 +4,28 @@ A powerful, AI-driven website builder that autonomously orchestrates, designs, a
 
 ## Project Screenshots
 
-<div align="center">
-  <img src="screenshots/screenshot4.png" alt="AI Builder Interface" width="800" style="margin-bottom: 20px;" />
-  <br />
-  <img src="screenshots/screenshot1.png" alt="Website Generation Process" width="800" style="margin-bottom: 20px;" />
-  <br />
-  <img src="screenshots/screenshot2.png" alt="Generated Website Top" width="800" style="margin-bottom: 20px;" />
-  <br />
-  <img src="screenshots/screenshot3.png" alt="Generated Website Bottom" width="800" />
-</div>
+<table align="center">
+  <tr>
+    <td align="center">
+      <b>1. AI Builder Interface</b><br/>
+      <img src="screenshots/screenshot5.png" width="400" alt="Builder Interface" />
+    </td>
+    <td align="center">
+      <b>2. AI Generation Process</b><br/>
+      <img src="screenshots/screenshot2.png" width="400" alt="Generation Process" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>3. Generated Website (Top)</b><br/>
+      <img src="screenshots/screenshot3.png" width="400" alt="Generated Website Top" />
+    </td>
+    <td align="center">
+      <b>4. Generated Website (Bottom)</b><br/>
+      <img src="screenshots/screenshot4.png" width="400" alt="Generated Website Bottom" />
+    </td>
+  </tr>
+</table>
 
 ---
 
