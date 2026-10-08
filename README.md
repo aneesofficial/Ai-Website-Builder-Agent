@@ -1,22 +1,22 @@
-# AI Website Builder Agent 🤖✨
+# AI Website Builder Agent
 
 A powerful, AI-driven website builder that autonomously orchestrates, designs, and executes code to generate complete, beautiful React & Tailwind CSS websites based on a simple user prompt.
 
-## 📸 Project Screenshots
+## Project Screenshots
 
-### AI Builder Interface (Frontend)
-![Builder Interface](screenshots/screenshot4.png)
-
-### Website Generation Process
-![Generation Process](screenshots/screenshot1.png)
-
-### Generated AI Website (Iron Forge Fitness)
-![Generated Website Top](screenshots/screenshot2.png)
-![Generated Website Bottom](screenshots/screenshot3.png)
+<div align="center">
+  <img src="screenshots/screenshot4.png" alt="AI Builder Interface" width="800" style="margin-bottom: 20px;" />
+  <br />
+  <img src="screenshots/screenshot1.png" alt="Website Generation Process" width="800" style="margin-bottom: 20px;" />
+  <br />
+  <img src="screenshots/screenshot2.png" alt="Generated Website Top" width="800" style="margin-bottom: 20px;" />
+  <br />
+  <img src="screenshots/screenshot3.png" alt="Generated Website Bottom" width="800" />
+</div>
 
 ---
 
-## 🚀 How It Works (The Agentic Flow)
+## How It Works (The Agentic Flow)
 
 This project uses a **Multi-Agent Architecture** powered by Google's Gemini API to automate the software development lifecycle. When a user provides their business details, 4 specialized agents take over:
 
@@ -42,13 +42,13 @@ This project uses a **Multi-Agent Architecture** powered by Google's Gemini API 
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 - **Frontend (UI):** React, Tailwind CSS, Vite
 - **Backend (API):** Node.js, Express, TypeScript
 - **AI Models:** Google Gemini 3.5 Flash
 - **Orchestration:** Custom JSON-based prompt chaining and multi-agent communication.
 
-## 🏃‍♂️ How to Run
+##  How to Run
 
 1. Clone the repository.
 2. Add your Gemini API key in \`backend/.env\` as \`GEMINI_API_KEY\`.
@@ -67,4 +67,4 @@ This project uses a **Multi-Agent Architecture** powered by Google's Gemini API 
 5. Once your website is generated, it is automatically saved to \`generated_workspace/frontend\`. You can navigate there, install dependencies, and run your new website!
 
 ---
-*Built with ❤️ using Google Gemini AI.*
+*Built with using Google Gemini AI.*
