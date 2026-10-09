@@ -25,22 +25,38 @@ Return ONLY a comma-separated list of these 3 keywords in lowercase, no other te
             
             console.log(`[Asset Agent] Keywords identified by AI: ${keywords.join(', ')}`);
             
-            // Generate real working dynamic image URLs using picsum.photos (more reliable)
+            // Generate hyper-realistic images using Pollinations AI
+            const getImageUrl = (keyword: string, w: number, h: number) => {
+                const prompt = `photorealistic real life high quality stock photo of ${keyword}, 8k dslr`;
+                return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${w}&height=${h}&nologo=true&seed=${Math.floor(Math.random() * 1000)}`;
+            };
+
+            const logoUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(businessName)}&background=random&color=fff&rounded=true&bold=true&size=128`;
+
             const assets = {
-                heroImage: `https://picsum.photos/seed/${keywords[0] || 'hero'}/1200/800`,
-                aboutImage: `https://picsum.photos/seed/${keywords[1] || 'about'}/800/800`,
-                featureImage: `https://picsum.photos/seed/${keywords[2] || 'feature'}/800/600`
+                logo: logoUrl,
+                heroImage: getImageUrl(`${keywords[0] || 'business'} corporate`, 1200, 800),
+                aboutImage: getImageUrl(`${keywords[1] || 'modern'} professional`, 800, 800),
+                featureImage: getImageUrl(`${keywords[2] || 'tech'} abstract`, 800, 600)
             };
             
-            console.log(`[Asset Agent] Assets generated successfully!`);
+            console.log(`[Asset Agent] Real stock photos and Logo fetched successfully from internet!`);
             return assets;
         } catch (error) {
-            console.error("[Asset Agent] Error extracting keywords (Quota?), using fallback keywords:", error);
+            console.error("[Asset Agent] Error extracting keywords, using fallback real images:", error);
+            
+            const getImageUrl = (keyword: string, w: number, h: number) => {
+                const prompt = `photorealistic real life high quality stock photo of ${keyword}, 8k dslr`;
+                return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${w}&height=${h}&nologo=true&seed=${Math.floor(Math.random() * 1000)}`;
+            };
+            const logoUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(businessName)}&background=random&color=fff&rounded=true&bold=true&size=128`;
+
             // Fallback assets
             return {
-                heroImage: `https://picsum.photos/seed/${businessName.replace(/\s+/g, '')}1/1200/800`,
-                aboutImage: `https://picsum.photos/seed/${businessName.replace(/\s+/g, '')}2/800/800`,
-                featureImage: `https://picsum.photos/seed/${businessName.replace(/\s+/g, '')}3/800/600`
+                logo: logoUrl,
+                heroImage: getImageUrl(`business headquarters`, 1200, 800),
+                aboutImage: getImageUrl(`team professional`, 800, 800),
+                featureImage: getImageUrl(`abstract tech`, 800, 600)
             };
         }
     }
